@@ -1,0 +1,67 @@
+<div class='content_area'>
+
+<h2>lists</h2>
+
+<div class="page_nav nav">
+  <%= link_to 'New list', new_list_path, :class => 'add' %>
+</div>
+  <% form_tag({:controller => :notes, :action => :search}, :method => "get", :id => 'search_form') do %>
+  <label for="s">note search</label>
+  <%= text_field_tag(:s) %>
+  <%= submit_tag("Search", :name => nil) %>
+  <% end %>
+
+  <% @lists.sort.each do | list_name, list | %>
+    <div class='list'>
+      <%= link_to h(list[:name]), list_path(list[:id]), :class => 'name' %>
+      <div class='controls'>
+        <div class='nav'>    
+          <%= link_to '+ add note', {:controller => :notes, :action => :new, :list_id => list[:id]}, :class => 'add' %>
+          <%= link_to '~ edit', edit_list_path(list[:id]), :class => 'edit', :title => 'edit this list' %>
+          <% if list[:name] != 'default' %>
+            <%= link_to '- delete', {:action => :delete, :id => list[:id]}, :class => 'delete', :title => 'mark this list for deletion, you will then have 12 hours to change your mind' %>
+          <% end %>
+        </div>
+        <div class='urls'>
+      		<span class='label'>urls:</span>
+          <%= link_to 'public link', :controller => :lists, :action => :show, :id => list[:id] %>
+          <% if list[:has_public_url] %>
+            <%= link_to 'readable link', {:controller => @user, :action => URI.escape(list[:name])}, :title => 'this url can be disabled by editing this list and unchecking the "has public url" check box' %>
+          <% else %>
+            <%= link_to 'readable link', '#', :class => 'disabled', :title => 'This list does not to have a readable url.  Edit the list to enable this.' %>
+          <% end %>
+          <%= link_to '.rss', :controller => :lists, :action => :show, :id => list[:id], :format => :rss %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<% if not @deleted_lists.empty? %>
+  <div class='content_area'>
+    <h2> deleted lists </h2>
+    <div class='h2_desc'>
+      Your lists has been disabled and will be deleted in about 24 hours.  If you change your mind within that time you can restore it.
+    </div>
+    <% @deleted_lists.sort.each do | list_name, deleted_list | %>
+      <div class='list'>
+        <div class='list_title'>
+            <a href='#' class='name' title='deleted lists can\'t be accessed'><%= h(deleted_list[:name]) %></a>
+        </div>
+        <div class='controls'>
+          <div class='nav'>  
+            <%= link_to "+ restore", {:action => :undelete, :id => deleted_list[:id]}, :class => 'action add', :title => 'you have at least 12 hours to undelete this list' %>
+          </div>
+          <div class='urls'>
+            <span class='label'>urls:</span>
+            <%= link_to 'public link', '#', :class => 'disabled', :title => 'deleted lists can\'t be accessed'%>
+            <%= link_to 'readable link', '#', :class => 'disabled', :title => 'deleted lists can\'t be accessed'%>
+            <%= link_to '.rss', '#', :class => 'disabled', :title => 'deleted lists can\'t be accessed'%>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+<% end %>
+
+<%= render :partial => 'users/bookmarklet' %>

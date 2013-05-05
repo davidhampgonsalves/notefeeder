@@ -1,0 +1,79 @@
+<script>
+  $(document).ready(function() {
+      if(!isLoggedIn)
+        $('.logged_in').hide();
+    });
+</script>
+
+<%= auto_discovery_link_tag :rss, {:action => :show, :id => @list[:id], :format => 'rss'} %>
+
+<div class='content_area'>
+  <h2> 
+  <% if @list[:name] %>
+    <%= @list[:name] %>
+  <% else %>
+    list notes 
+  <% end %>
+  </h2>
+
+  <div class='page_nav nav'> 
+    <%= link_to 'add note', {:controller => :notes, :action => :new, :list_id => @list[:id] }, :class => 'add logged_in' %>
+    <%= link_to 'view your lists', {:controller => :lists} %>
+  </div>
+
+
+  <div id='list'>
+    <% has_next = (@notes.length == 16) %>
+    <% if has_next
+      @notes.pop #get rid of the last element it was just to see if we need to pagnate
+    end %>
+
+    <% @notes.each do | note | %>
+      <div class='note'>
+        <div class='note_content <%= note.completed ? 'completed' : '' %>'>
+          <% if !note.is_private and note.url and not note.url.strip.empty? and (not note.description or note.description.empty?) %>
+            <%= link_to h(note.title), add_protocol_to_url(note.url), :class => 'title' %>
+            <%= link_to strip_tags(markdown(note.description[0..150])), add_protocol_to_url(note.url), :class => 'description' %>     
+          <% else %>
+            <%= link_to h(note.title), note_path(note), :class => 'title' %>
+            <% if !note.is_private %>
+              <%= link_to strip_tags(markdown(note.description[0..150])), note_path(note), :class => 'description' %>     
+            <% end %>
+          <% end %>
+        </div>
+        <div class='nav logged_in'>
+          <% if !note.completed %>
+            <%= link_to 'completed', {:controller => :notes, :action => :complete, :id => note.id}, :class => 'add' %>
+          <% end %>
+          <%= link_to '~ edit', {:controller => :notes, :action => :edit, :id => note.id}, :class => 'edit' %>
+          <%= link_to '- delete', {:controller => :notes, :action => :delete, :id => note.id}, :class => 'delete' %>
+          </div>
+      </div>
+    <% end %>
+
+    <% if @notes.empty? %>
+      <div class='note'><div class='note_content'>
+        <a href='#' class='title' title='it\'s time to create some notes, check out the bookmarklet'> no notes yet </a>
+        <a href='#' class='description' title='it\'s time to create some notes, check out the bookmarklet'> you should create some</a>
+      </div></div>
+    <% end%>
+
+    <div class='left_arrow<%= @page > 0 ? '' : '_disabled' %>'> </div>
+    <div class='back_nav <%= @page > 0 ? '' : 'disabled' %>'>
+      <% if @page > 0 %>    
+        <%= link_to 'back', :controller => :lists, :action => :show, :id => @list[:id], :page => @page-1 %>
+      <% else %>
+        back
+      <% end %>
+    </div>
+      
+    <div class='forward_nav <%= has_next ? '' : 'disabled' %>'>
+      <% if has_next %>
+        <%= link_to 'next', :controller => :lists, :action => :show, :id => @list[:id], :page => @page+1 %>
+      <% else %>
+        next
+      <% end %>
+    </div>
+    <div class='right_arrow<%= has_next ? '' : '_disabled' %>'> </div>
+  </div>
+</div>

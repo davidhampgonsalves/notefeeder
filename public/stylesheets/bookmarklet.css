@@ -1,0 +1,148 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+#nf_9823 {
+background:#FFF;
+position:fixed;
+right:-425px;
+width:400px;
+top:0;
+border-left:3px solid #646464;
+border-bottom:3px solid #646464;
+-webkit-border-bottom-left-radius: 10px;
+-moz-border-radius-bottomleft: 10px;
+border-bottom-left-radius: 10px;
+z-index:2147483647;
+text-align:center;
+padding:5px
+}
+
+#nf_9823 #title,#nf_9823 #list_id {
+text-align:center;
+height:25px;
+font-size:15px
+}
+
+#nf_9823 #url,#nf_9823 #desc,#nf_9823 #title,#nf_9823 #list_id {
+width:360px;
+height:20px;
+border:solid 1px #000;
+font-size:12px;
+clear:right;
+float:left;
+display:block;
+}
+
+#nf_9823  * {
+background:none;
+color:#000;
+line-height:100%;
+letter-spacing:normal;
+font-size:15px;
+position:static;
+height:auto;
+width:auto;
+clear:none;
+float:none;
+margin:2px 0 0;
+padding:0;
+font-family: Droid Sans, arial, serif;
+}
+
+#nf_9823 .error {
+background:#f5c8c3
+}
+
+#nf_9823 .success {
+width:250px;
+background:#c8ffc8
+}
+
+#nf_9823 .success,#nf_9823 .error {
+clear:both;
+width:300px;
+height:15px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+margin:0 auto;
+padding:5px
+}
+
+#nf_9823 a {
+font-family:Lobster, arial, serif;
+color:#646464;
+font-size:15px;
+text-decoration:none
+}
+
+#nf_9823 a.close {
+float:right;
+width:45px;
+height:25px;
+line-height:170%;
+background:#ffc8c8;
+font-weight:900;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+#nf_9823 a.close:hover {
+color:#969696;
+background:#ffdcdc
+}
+
+#nf_9823 a.h1 {
+margin-left:-30px;
+font-size:20px;
+width:100px;
+height:25px
+}
+
+#nf_9823 a.h1:hover,#nf_9823 a.h2:hover {
+color:#64cd64
+}
+
+#nf_9823 a.h2 {
+font-size:15px;
+float:left;
+height:20px;
+width:80px
+}
+
+#nf_9823 a.submit {
+clear:left;
+display:block;
+width:100px;
+padding:5px;
+background:#c8ffc8;
+font-weight:900;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+position:relative;
+top:2px;
+margin:0 auto
+}
+
+#nf_9823 a.submit:hover {
+color:#FFF;
+background:#78d278
+}
+
+#nf_9823 img.loading {
+float:left;
+width:30px;
+height:30px
+}
+
+#nf_9823 label {
+width:30px;
+height:20px;
+display:block;
+float:left;
+text-align:right;
+line-height:150%;
+margin-right:3px
+}

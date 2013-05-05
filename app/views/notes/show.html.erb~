@@ -1,0 +1,10 @@
+<h1>Showing note</h1>
+
+  <div> 
+    <h2> <%=h @note.title %> </h2>
+    <span id='description'> <%= markdown @note.description %> </span>
+    <span id='url'> <%= link_to h(@note.url), add_protocol_to_url(@note.url) %> </span>
+  </div>
+
+<%= link_to 'Edit', :controller => :notes, :action => :edit, :id => @note.id %>
+<%= link_to 'Back', list_path(@note.list_id) %>

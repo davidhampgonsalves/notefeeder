@@ -1,0 +1,6 @@
+first you need the contrib/btree_gist module.  This includes running the sql for the module located at: /usr/share/postgresql/8.4/contrib/btree_gist.sql
+
+create index notes_tsearch on notes using gist(to_tsvector('english', title || url), list_id);
+
+
+

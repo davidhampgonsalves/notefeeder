@@ -1,0 +1,27 @@
+<h1> 
+<% if @list.name %>
+  <%= @list.name %>
+<% else %>
+  list notes 
+<% end %>
+</h1>
+  <% @notes.each do | note | %>
+    <div> 
+      <span>
+        <% if note.url and (not note.description or note.description.empty?) %>
+          <%= link_to h(note.title), add_protocol_to_url(note.url) %>
+        <% else %>
+          <%= link_to h(note.title), note_path(note) %>
+        <% end %>
+      </span>
+      <span id='description'><%= strip_tags(markdown(note.description[0..150])) %></span>
+      <!--span id='url'> <%= link_to h(note.url), add_protocol_to_url(note.url) %> </span-->
+      <span>
+        <%= link_to 'Edit', :controller => :notes, :action => :edit, :id => note.id %>
+        <%= link_to 'Delete', :controller => :notes, :action => :delete, :id => note.id %>
+      </span>
+    </div>
+  <% end %>
+
+<%= link_to 'new note', {:controller => :notes, :action => :new, :list_id => @list.id } %>
+<%= link_to 'view your lists', {:controller => :lists} %>

@@ -1,0 +1,30 @@
+class CreateNotes < ActiveRecord::Migration
+  def self.up
+    create_table :notes do |t|
+      t.integer :list_id
+      t.string :title
+      t.text :description
+      t.text :url
+      t.timestamp :created_at    
+    end
+  end
+
+  def self.down
+    drop_table :notes
+  end
+end
+
+class CreateLists < ActiveRecord::Migration
+  def self.up
+    create_table :lists do |t|
+      t.string :name
+      t.string :user
+      t.timestamp :created_at
+    end
+    add_index :user, :name
+  end
+
+  def self.down
+    drop_table :lists
+  end
+end

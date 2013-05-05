@@ -1,0 +1,190 @@
+class ListsController < ApplicationController
+  before_filter :login_required, :except => [:show]
+  helper :notes
+
+  # GET /lists
+  def index
+    #if the user lists hash dosn't exist then populate it
+    init_session_user_lists
+
+    #use the user lists session hash to create the index page
+    @user = user
+    @lists = user_lists
+    @deleted_lists = deleted_user_lists
+
+    respond_to do |format|
+      format.html # index.html.erb
+    end
+  end
+
+
+  #GET /lists/show
+  def show
+    list_id = params[:id]
+    
+    #if the user_lists are stored in the cache then get the name of this list
+    if user_lists_cached?
+      @list = get_cached_list_info(list_id)
+    else
+      @list = List.find(list_id, :conditions => {:deleted => false}) 
+    end
+
+    if not @list
+      flash[:notice] = "a list with id #{list_id} wasn't found"
+      redirect_to :controller => :error
+    end
+
+    @notes = Note.all(:conditions => { :list_id => @list.id })
+  end
+
+  #GET /lists/show_by_name
+  def show_by_name
+    #use the default list if a list name wasn't spesified
+    if params.key? :list_name
+      list_name = URI.unescape(params[:list_name])
+    else
+      list_name = 'default'
+    end
+
+    #if the user_lists has been initilized use that instead of going to the database
+    if user_lists_cached?
+      list = user_list[list_name]
+      #if this list dosn't have a public url then they can't access it this way
+      if not list.has_public_url
+        list = nil
+      end
+    else
+      list = List.find(:first, :conditions => { :user => params[:user], :name => list_name, :has_public_url => true})
+    end    
+
+    if list != nil
+      @title = list_name
+
+      #get the notes for this list
+      @notes = Note.all(:conditions => { :list_id => list.id })
+      render :action => :show
+    else
+      flash[:notice] = "The list '#{list_name}' wasn't found"
+      redirect_to :controller => 'lists'    
+    end
+  end
+
+  # GET /lists/new
+  def new
+    @list = List.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+    end
+  end
+
+  # GET /lists/1/edit
+  def edit
+    @list = List.find(params[:id], :conditions => { :user => user})
+  end
+
+  # POST /lists
+  def create
+    @list = List.new(params[:list])
+    #set the current user as the lists user 
+    @list.user = user
+
+    respond_to do |format|
+      if @list.save
+        flash[:notice] = 'List was successfully created.'
+        
+        #if the session contains the users list of lists then add this new list
+        if user_lists
+          user_lists[@list.name] = @list
+        end
+
+        format.html { redirect_to :controller => :lists }
+      else
+        format.html { render :action => "new" }
+      end
+    end
+  end
+
+  # PUT /lists/1
+  def update
+    @list = List.find(params[:id], :conditions => { :user => user})
+
+    respond_to do |format|
+      org_name = @list.name
+
+      #update the active record with the new name
+      if @list.update_attributes(params[:list])
+        flash[:notice] = 'the list name was successfully updated.'
+
+        #if the session contains the users list of lists then make the change there too
+        if user_lists
+          #remove the old entry
+          user_lists.delete(org_name)
+          #add the list entry with its new name
+          user_lists[@list.name] = @list.id
+        end
+
+        format.html { redirect_to :controller => :lists }
+      else
+        format.html { render :action => "edit" }
+      end
+    end
+  end
+
+  # DELETE /lists/1
+  def delete
+    @list = List.find(params[:id], :conditions => { :user => user})
+    
+    if @list.name == 'default'
+      flash[:notice] = 'you can\'t delete the default list'
+      redirect_to(lists_url)   
+    end
+
+    #mark list as deleted
+    @list.update_attributes :deleted => true, :has_public_url => false
+
+    #if the user lists exists delete this lists name from it
+    if(user_lists)
+      #add it to the users deleted lists
+      deleted_user_lists[@list.name] = @list.id
+      #delete the list from the session      
+      user_lists.delete @list.name
+    end
+
+    respond_to do |format|
+      format.html { redirect_to(lists_url) }
+    end
+  end
+
+  # UNDELETE /lists/1
+  def undelete
+    @list = List.find(params[:id], :conditions => { :user => user})
+
+    #if the user lists exists delete this list entry from it
+    if(user_lists)
+      #add it to the users lists
+      user_lists[@list.name] = @list.id
+      #delete the list from the users deleted lists
+      deleted_user_lists.delete @list.name
+    end
+
+    #mark list as deleted
+    @list.update_attributes :deleted => false
+
+    respond_to do |format|
+      format.html { redirect_to(lists_url) }
+    end
+  end
+
+  #returns the list info based on id
+  def get_cached_list_info(list_id)
+
+      user_lists.each_value do | list |
+        if list.id == list_id
+          return list
+        end
+      end
+
+      return nil
+  end
+end

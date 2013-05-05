@@ -1,0 +1,26 @@
+<h1>Lists</h1>
+
+<% @lists.each_value do | list | %>
+  <%= list %>
+  <%= link_to h(list[:name]), list_path(list[:id]) %>
+  <% if list[:name] != 'default' %>
+    <%= link_to 'Edit', edit_list_path(list[:id]) %>
+    <%= link_to "Delete", {:action => :delete, :id => list[:id]} %>
+  <% end %>
+  <div> <%= link_to 'public link', :controller => 'lists', :action => 'show', :id => list[:id] %> </div>
+  <div> <%= link_to 'readable link', :controller => @user, :action => URI.escape(list[:name]) %> </div>
+  <br/>
+<% end %>
+
+<br />
+
+<%= link_to 'New list', new_list_path %>
+
+<% if not @deleted_lists.empty? %>
+  <h2> deleted lists </h2>
+  <% @deleted_lists.each_value do |deleted_list| %>
+    <%= link_to h(deleted_list[:name]), :controller => 'lists', :action => 'show', :id => deleted_list[:id] %>
+    <%= link_to "undelete", {:action => :undelete, :id => deleted_list[:id]} %>
+    <br/>
+  <% end %>
+<% end %>

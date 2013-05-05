@@ -1,0 +1,12 @@
+module NotesHelper
+
+  #format the url to be used in a href
+  def sanitize_url(url)
+    #add the http protocol if one isn't set
+    if not url.match /[^\/]+?:\/\//
+      url = 'http://' + url
+    end
+
+    return url
+  end
+end

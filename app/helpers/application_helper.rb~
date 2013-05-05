@@ -1,0 +1,30 @@
+# Methods added to this helper will be available to all templates in the application.
+module ApplicationHelper
+  def login_required
+    #check if the user is logged in
+    if session[:user]
+      return true
+    end
+
+    #user is not logged in, save the original request
+    session[:org_request] = request.request_uri
+    #redirect to login page
+    redirect_to :controller => "login"
+    return false
+  end
+
+  #returns the current user (name)
+  def user
+    session[:user]
+  end
+
+  #redirects the user to the orginally requested uri
+  def redirect_to_org_request
+    if org_request = session[:org_request]
+      redirect_to_url org_request
+    else
+      redirect_to :controller => :root
+    end
+  end
+  
+end

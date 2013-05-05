@@ -1,0 +1,14 @@
+<h1>New User</h1>
+
+<% form_for(@user) do |u| %>
+  <%= u.error_messages %>
+
+  <p>
+    <%= u.label :user_name %><br />
+    <%= u.text_field :user_name %>
+  </p>
+  <p>
+    <%= u.submit 'Create' %>
+  </p>
+<% end %>
+

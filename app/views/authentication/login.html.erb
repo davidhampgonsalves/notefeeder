@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  $(document).ready(function() 
+  {
+    openid.init('openid_identifier');
+  });
+</script>
+
+<div class='small_content_area content_area'>
+  <h2>login</h2>
+
+  <% form_tag({:action => 'begin_openid_auth'}, :id => :openid_form) do %>
+	  <input type="hidden" name="action" value="verify" />
+    <div id='small_content_area'>
+      		<div id="openid_choice">
+	      		<div class='blurb'> <h4> Please select your OpenID account provider </h4> An <a href='http://openid.net/get-an-openid/'>OpenId</a> is required to use this application but you probably already have one. </div>
+	      		<div id="openid_btns"></div>
+			  </div>
+			
+			  <div id="openid_input_area">
+				  <input id="openid_identifier" name="openid_identifier" type="text" value="http://" />
+				  <input id="openid_submit" type="submit" value="Sign-In"/>
+			  </div>
+			  <noscript>
+			  <p>OpenID is service that allows you to log-on to many different websites using a single indentity.
+			  Find out <a href="http://openid.net/what/">more about OpenID</a> and <a href="http://openid.net/get/">how to get an OpenID enabled account</a>.</p>
+			  </noscript>
+  <% end %>
+</div>

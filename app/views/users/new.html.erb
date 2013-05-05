@@ -1,0 +1,55 @@
+<script>
+
+		$(document).ready(function()
+		{
+      $("#verify_user").show();
+      $(".action").click(function()
+      {
+        $('#result').html("checking...");
+        var user_name = $('#user_user').val();
+        var url = '<%= url_for :controller => :users, :action => :is_available %>/index.js?user_name=' + user_name;
+        $.getJSON(url, function(result) {
+          $('.input_error_msg').remove();
+          var results = $('#result');
+          if(result.available)
+          {
+              results.addClass('success');
+              results.removeClass('error');
+          }else
+            results.addClass('error');
+
+          results.html(result.msg);
+          results.show();
+        });
+  		});
+
+      $('#user_user').bind('keyup', function(key)
+      {
+        $('.user_name').html(this.value);
+      });
+    
+  	});
+</script>
+
+<div class='content_area small_content_area'>
+  <h2>new user</h2>
+  <% form_for(@user) do |u| %>
+    <div class='blurb'>
+      <h4> thanks for trying note feeder </h4>      
+      Since this is the first time your logging in to notefeeder you need to choose a user name.  This will be used the create readable urls for your lists and feeds.
+      <div class='example_links'>
+        <span class='example_link'>http://notefeeder.com/<span class='user_name'>user_name</span>/your_list_name</span>
+        <span class='example_link'>http://notefeeder.com/<span class='user_name'>user name</span>/your_list_name/.rss</span>
+      </div>
+    </div>
+
+    <p>
+      <%= u.label 'user name' %>
+      <%= u.text_field :user %>
+      <a href='#' class='action' id='verify_user'>check</a>
+      <%= display_field_errors @user, :user %>
+      <div><span id='result'> </span> </div>
+      <p><%= u.submit 'Create' %></p>
+    <p>
+  <% end %>
+</div>

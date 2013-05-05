@@ -1,0 +1,6 @@
+notes
+create
+
+ <% if flash[:error] %>
+     <%= flash[:notice] %>
+<% end %>

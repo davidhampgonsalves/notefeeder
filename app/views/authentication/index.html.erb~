@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <%= stylesheet_link_tag "openid" %>
+  </head>
+   <body>
+<script src="http://www.google.com/jsapi"></script>
+<script> google.load("jquery", "1.4.2"); </script>
+<%= javascript_include_tag "jquery-openid" %>
+
+
+
+<h2>login</h2>
+<% if error = flash[:error] %>
+  <%=  error %>
+<% end%>
+
+<% form_tag({:action => 'begin_openid_auth'}, :class=>:openid) do %>
+  <div><ul class="providers"> 
+  <li class="openid" title="OpenID"><%= image_tag "icons/openidW.png", :alt => :icon %> 
+  <span><strong>http://{your-openid-url}</strong></span></li> 
+  <li class="direct" title="Google"> 
+		<%= image_tag "icons/googleW.png", :alt => :icon %><span>https://www.google.com/accounts/o8/id</span></li> 
+  <li class="direct" title="Yahoo"> 
+		<%= image_tag "icons/yahooW.png", :alt => :icon %><span>http://yahoo.com/</span></li> 
+  <li class="username" title="AOL screen name"> 
+		<%= image_tag "icons/aolW.png", :alt => :icon %><span>http://openid.aol.com/<strong>username</strong></span></li> 
+  <li class="username" title="MyOpenID user name"> 
+		<%= image_tag "icons/myopenid.png", :alt => :icon %><span>http://<strong>username</strong>.myopenid.com/</span></li> 
+  <li class="username" title="Flickr user name"> 
+		<%= image_tag "icons/flickr.png", :alt => :icon %><span>http://flickr.com/<strong>username</strong>/</span></li> 
+  <li class="username" title="Technorati user name"> 
+		<%= image_tag "icons/technorati.png", :alt => :icon %><span>http://technorati.com/people/technorati/<strong>username</strong>/</span></li> 
+  <li class="username" title="Wordpress blog name"> 
+		<%= image_tag "icons/wordpress.png", :alt => :icon %><span>http://<strong>username</strong>.wordpress.com</span></li> 
+  <li class="username" title="Blogger blog name"> 
+		<%= image_tag "icons/blogger.png", :alt => :icon %><span>http://<strong>username</strong>.blogspot.com/</span></li> 
+  <li class="username" title="LiveJournal blog name"> 
+		<%= image_tag "icons/livejournal.png", :alt => :icon %><span>http://<strong>username</strong>.livejournal.com</span></li> 
+  <li class="username" title="ClaimID user name"> 
+		<%= image_tag "icons/claimid.png", :alt => :icon %><span>http://claimid.com/<strong>username</strong></span></li> 
+  <li class="username" title="Vidoop user name"> 
+		<%= image_tag "icons/vidoop.png", :alt => :icon %><span>http://<strong>username</strong>.myvidoop.com/</span></li> 
+  <li class="username" title="Verisign user name"> 
+		<%= image_tag "icons/verisign.png", :alt => :icon %><span>http://<strong>username</strong>.pip.verisignlabs.com/</span></li> 
+  </ul></div> 
+  <fieldset> 
+  <label for="openid_username">Enter your <span>Provider user name</span></label> 
+  <div><span></span><input type="text" name="openid_username" /><span></span> 
+  <input type="submit" value="Login" /></div> 
+  </fieldset> 
+  <fieldset> 
+  <label for="openid_identifier">Enter your <a class="openid_logo" href="http://openid.net">OpenID</a></label> 
+  <div>
+    <%= text_field_tag 'openid_identifier' %> 
+    <input type="submit" value="Login" /></div> 
+  </fieldset> 
+<% end %>
+
+<script type="text/javascript">  $(function() { $("form.openid:eq(0)").openid(); });</script>
+
+  </body>
+</html>

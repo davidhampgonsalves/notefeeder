@@ -1,0 +1,28 @@
+<h1>New Note</h1>
+
+<% form_for(@note) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :list_id %><br />
+    <%= f.select :list_id, options_for_select(@user_lists, :selected => @list_id.to_i) %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field h(:title) %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area h(:description) %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_area :url %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', list_path(@list_id.to_i) %>
+

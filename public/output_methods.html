@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+        <title>note feeder: disposable bookmarking output methods</title>
+
+        <link href="stylesheets/front_page.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          try{
+            var pageTracker = _gat._getTracker("UA-19849283-1");
+            pageTracker._trackPageview();
+          } catch(err) {}
+        </script>
+
+	</head>
+	<body>
+		<h1> <a href="/">note feeder</a> <div id="underline"></div> </h1>
+		<div id="nav"> <a href="about.html"> about </a> <a href="input_methods.html"> input methods </a> <a href="output_methods.html"> output methods </a> <a href="lists"> login </a></div>
+
+		<div class="content_area">
+      <h2> output options </h2>
+      There a few way to access your lists.  Each of these urls can be found on your lists page beside each list.
+      <p>
+        <h3><a name='rss'>RSS Feed:</a></h3> Each lists as an <a href='http://en.wikipedia.org/wiki/RSS'>RSS Feed</a> assoicated with it.  The RSS feed contains the newest 25 notes that arn't marked as completed.  
+        <br/>Firefox has great native handling for this or if you use chrome I would suggest <a href="https://chrome.google.com/extensions/detail/jpgagcapnkccceppgljfpoadahaopjdb">Foxish</a>(full disclosure: I wrote it).  Or finally <a href='http://www.google.com/reader'>Google Reader</a>.
+      </p>
+      <p>      
+        <h3><a name='readable_url'>Readable Url:</a></h3> Each list has an optional readable url. You can disable this by unchecking the readable url option for the list.  
+        <br/>      
+        This url takes the form: http://notefeeder.heroku.com/<span class='important'>&lt;your user name&gt;</span>/<span class='important'>&lt;your lists name&gt;</span>
+      </p>
+      <p>      
+        <h3><a name='private_url'>Private Url:</a></h3> This is slightly more private and its just an auto generated id for the list.  This url hides who owns the list.
+        <br/>      
+        This url takes the form: http://notefeeder.heroku.com/lists/<span class='important'>&lt;list id&gt;</span>
+      </p>
+    </div>
+</body></html>

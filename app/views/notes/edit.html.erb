@@ -1,0 +1,71 @@
+<script>
+	$(document).ready(function() {
+		$("#note_input").submit(function(){
+      input_areas = $('.input_area');	
+			input_fields = input_areas.children('.input_field');
+
+			errors = ['', '', ''];
+			valid = true
+			if(validate_on_class(input_fields, errors))
+			{
+				valid = validate_all_not_empty(input_fields, errors);
+			}else
+				valid = false;
+
+			update_error_areas(input_areas, errors);
+
+			return  valid;	
+		});
+	});
+</script>
+
+<div class='content_area'>
+  <% if controller.action_name == 'edit' %>
+    <h2>editing note</h2>
+  <% else %>
+    <h2>creating note</h2>
+  <% end %>
+
+  <div class='page_nav nav'>
+    <% if controller.action_name == 'edit' %>
+      <%= link_to 'view this note', @note %>
+    <% end %>
+    <%= link_to 'view your lists', {:controller => :lists} %>
+    <% if params.key? 'list_id' %>
+      <%= link_to 'view this list', {:controller => :lists, :action => :show, :id => params['list_id']} %>
+    <% elsif @note.list_id != nil %> 
+      <%= link_to 'view this list', {:controller => :lists, :action => :show, :id => @note.list_id} %>
+    <% end %>
+  </div>
+
+  <% form_for(@note, :html => {:id => 'note_input'}) do |f| %>
+      <%= f.select :list_id, options_for_select(@list_name_ids, :selected => (params['list_id'] ? params['list_id'].to_i : @note.list_id)), :html => {:id => 'name'} %>
+
+      <%= f.label :title, 'title', :class => 'input_label' %>
+      <div class="input_area">
+        <%= f.text_field :title, :class => 'input_field length100' %>
+        <%= display_field_errors @note, :title %>
+      </div>
+
+      <%= f.label :url, 'url',:class => 'input_label' %>
+      <div class="input_area">
+          <%= f.text_area :url, :class => 'input_field length800' %>
+          <%= display_field_errors @note, :url %>
+      </div>
+
+       <%= f.label :description, 'description', :class => 'input_label' %>
+      <div class="input_area">
+        <%= f.text_area :description, :class => 'input_field length800', :title => 'suports markdown syntax, see the about page for details' %>
+        <%= display_field_errors @note, :description %>
+      </div>
+
+      <%= f.label :is_private, 'private', :class => 'input_label' %>
+      <%= f.check_box :is_private %>
+
+      <%= f.label :completed, 'completed', :class => 'input_label' %>
+      <%= f.check_box :completed %>    
+
+
+      <%= f.submit controller.action_name == 'edit' ? 'Update' : 'Create', :class=>'button'%>
+  <% end %>
+</div>

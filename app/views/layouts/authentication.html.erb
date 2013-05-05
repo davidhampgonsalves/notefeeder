@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="Pragma" content="no-cache" /> 
+  <meta http-equiv="Expires" content="-1" />
+  <title>note feeder: disposable bookmarking</title>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+    try{
+      var pageTracker = _gat._getTracker("UA-19849283-1");
+      pageTracker._trackPageview();
+    } catch(err) {}
+  </script>
+
+	<script>
+		google.load("jquery", "1.4.2");
+	</script>
+  <%= javascript_include_tag "openid-jquery" %>
+  <%= javascript_include_tag "openid-jquery-en" %>
+  <%= stylesheet_link_tag "openid" %>
+  <%= stylesheet_link_tag 'note_feeder' %>
+</head>
+<body>
+
+<div id='head'>
+	<h1> <a href='/'>note feeder</a> </h1>
+  <a href='#' class='login'> </a>
+</div>
+
+<% if flash[:notice] %>
+  <div id='notice'><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+  <div id='error'><%= flash[:error] %></div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

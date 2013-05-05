@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+        <title>note feeder: about disposable bookmarking</title>
+        <link href="stylesheets/front_page.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          try{
+            var pageTracker = _gat._getTracker("UA-19849283-1");
+            pageTracker._trackPageview();
+          } catch(err) {}
+        </script>
+	</head>
+	<body>
+		<h1> <a href="/">note feeder</a> <div id="underline"></div> </h1>
+		<div id="nav"> <a href="about.html"> about </a> <a href="input_methods.html"> input methods </a> <a href="output_methods.html"> output methods </a> <a href="lists"> login </a></div>
+
+		<div class="content_area">
+      <h2> about </h2>
+      I created notefeeder to help me keep track of interesting things I found while surfing Reddit and HN so I could find them later. 
+      I didn't want to have to leave my current page to do so and wanted the option to jot down any notes or ideas at the same time. 
+      <p>
+        Notefeeder accomplishes this using a simple <a href='input_methods.html#bookmarklet'>bookmarklet</a> to create notes in just two clicks and RSS feeds to view what you created.
+      </p>
+      <p>          
+        Its aim is to help you save things you like and what you were thinking at that time so you can come back to them later wherever you are.
+      </p>
+    </div>
+    <div class="content_area">    
+			<h2>notes</h2>
+      <div class='sub_content'>
+       Notes are comprised of or one or more of the following parts. 
+        <ul class='plain'>
+            <li> <span class='title'>title:</span> Just a short(50 character) plain text field.  The bookmarklet with auto fill this with the current page's title.
+            <li> <span class='title'>url:</span> the link the note is related to..  If the note is small you'll be taken to this url when you click on the note.
+            <li> <span class='title'>description:</span> The main body of your note.  Supports <a href='http://en.wikipedia.org/wiki/Markdown'>markdown</a> syntax.
+        </ul>
+        <br/>
+        They also have a couple of settings which are:
+        <ul class='plain'>
+            <li><span class='title'>private flag:</span> You can set notes to be private(ish) editing the note and checking the "is private" box.  This will still show the notes title but will hide its url and description.
+            <li><span class='title'>completed notes:</span> When you've marked a note as completed it will no longer appear in the lists RSS feed but will still show in the list but will be crossed out.  You can unmark a note by editing it and unchecking the "completed" box.
+        </ul>
+      </div>
+
+      <h2> lists </h2>
+      You can use lists to group your notes into logical categories or just use the default list that is always availiable.  Each list has an RSS Feed assoicated with it.  
+		</div>
+</body></html>

@@ -1,0 +1,26 @@
+<div class='small_content_area content_area'>
+  <h2>edit list</h2>
+  <div class='page_nav nav'>
+    <%= link_to 'Back', lists_path %>
+  </div>
+
+  <% form_for(@list) do |f| %>
+    <div class='blurb'>
+      <h4> Editing list </h4>
+      Unselecting the public url makes it harder for other users to find your feeds by preventing access via the readable urls.
+    </div>
+
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+      <%= display_field_errors @list, :name %>
+    </p>
+    <p>
+      <%= f.label :has_public_url %>
+      <%= f.check_box :has_public_url %>
+    </p>
+    <p>
+      <%= f.submit 'Save', :class => 'button' %>
+    </p>
+  <% end %>
+</div>

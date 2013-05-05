@@ -1,0 +1,35 @@
+<script>
+ $(document).ready(function() {
+    <% if flash.key? :highlight_bookmarklet %>
+      window.setTimeout(highlightBookmarklet, 1500);
+    <% end %>
+    if($.browser.msie)
+    {
+        $('#firefox').hide();
+        $('#ie').show();
+    }
+  });
+</script>
+
+<div class='content_area'>
+  <div id='bookmarklet_blurb'>
+    <h3>bookmarklet </h3>To setup, just 
+    <span class='install_instructions' id='firefox'>drag the note feeder button on the right to your bookmark bar.  </span>
+    <span class='install_instructions' id='ie'>right click on the note feeder button on the right and select &ldquo;Add to Favorites&rdquo;. </span>
+    <br>From any page click that bookmark and a panel will slide in that can create your notes. Read more about it <a href="http://notefeeder.heroku.com/input_methods.html#bookmarklet">here</a>.
+  </div>
+  <a id='bookmarklet_badge' title='note feeder' 
+    href='javascript:(function() {
+		var _notefeeder_bookmarklet_css=document.createElement("link");
+		_notefeeder_bookmarklet_css.rel="stylesheet";
+		_notefeeder_bookmarklet_css.type="text/css";
+		_notefeeder_bookmarklet_css.href="http://notefeeder.heroku.com/stylesheets/bookmarklet.css";
+		document.getElementsByTagName("head")[0].appendChild(_notefeeder_bookmarklet_css);
+
+    window.userLists = <%= get_lists_names_and_ids_json(@lists) %>;
+		var _notefeeder_bookmarklet_script=document.createElement("script");
+		_notefeeder_bookmarklet_script.type="text/javascript";
+		_notefeeder_bookmarklet_script.src="http://notefeeder.heroku.com/javascripts/bookmarklet.js";
+		document.documentElement.appendChild(_notefeeder_bookmarklet_script);
+})();'>note feeder</a>
+</div>

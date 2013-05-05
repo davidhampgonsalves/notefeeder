@@ -1,0 +1,36 @@
+class UsersController < ApplicationController
+
+  def new
+    @user = User.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+    end
+  end
+
+  def create
+    if not session[:user_openid]
+      redirect_to :controller => :login
+    end
+
+    @user = User.new(params[:user])
+    @user.user_openid = session[:user_openid]
+
+    respond_to do |format|
+      if @user.save
+          flash[:notice] = 'welcome to note feeder ' + @user.user
+          
+          #log this user in
+          login_user @user.user
+
+          #create the default list for this user
+          default_list = List.new(:user => @user.user, :name => 'default', :has_public_url => false)
+          default_list.save
+          
+          format.html { redirect_to :controller => :lists }
+      else
+        format.html { render :action => "new" }
+      end
+    end
+  end
+end

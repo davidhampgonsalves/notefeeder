@@ -1,0 +1,11 @@
+module ListsHelper
+  
+  #returns the list info based on id
+  def get_cached_list_info(list_id)
+      for list in user_list
+        if list.id == list_id
+          return list_name
+        end
+      end
+  end
+end

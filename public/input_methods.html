@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+	<head>
+        <title>notefeeder: creating disposable bookmarks</title>
+
+        <link href="stylesheets/front_page.css" media="screen" rel="stylesheet" type="text/css" />
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
+          try{
+            var pageTracker = _gat._getTracker("UA-19849283-1");
+            pageTracker._trackPageview();
+          } catch(err) {}
+        </script>
+
+	</head>
+	<body>
+		<h1> <a href="index.html">note feeder</a> <div id="underline"></div> </h1>
+		<div id="nav"> <a href="about.html"> about </a> <a href="input_methods.html"> input methods </a> <a href="output_methods.html"> output methods </a> <a href="lists"> login </a></div>
+
+		<div class="content_area">
+      <h2> input methods </h2>
+      <h3><a name='bookmarklet'>bookmarklet</a></h3>The main and easiest way to create notes in notefeeder is using the bookmarklet.  After you login your bookmarklet will be at the bottom of the page. To save it for later just drag the link to your bookmark bar.  
+      <p>
+        Once it is safely in your bookmark bar you can click on it without leaving your current page you'll see an area slide in which will already have the current page url and title populated.  Then you can make any changes or add some details and create the note.
+      </p>
+      <h3><a name='get_request'>get request</a></h3>
+        You can also create note using a simple get request to the url http://notefeeder.heroku.com/create/notes. 
+        This request must contain the list_id whichis is the number you see in the lists <a href='output_methods.html#private_url'>private url</a>.
+        It must also contain at least one of the following: title, url or description.
+        <br/>
+        ie: <span class='not_important'>http://notefeeder.heroku.com/create/notes?<span class='important'>list_id</span>=1&<span class='important'>url</span>=notefeeder.heroku.com</span>
+        <p>
+          This can be useful if you use firefox and create a <a href='http://www.mozilla.org/docs/end-user/keywords.html'>bookmark keyword</a> on this url.  This will let you add simple notes from your address bar.  <br/>ie: <span class='not_important'>http://notefeeder.heroku.com/create/notes?list_id=<span class='important'>&lt;your list id&gt;</span>&url=<span class='important'>%s</span></span>
+        </p>
+      <h3><a name='form'>plain old form</a></h3>
+      You of course can also just login to notefeeder and click "add note" on any of your lists to create whatever you need. 
+    </div>
+</body></html>

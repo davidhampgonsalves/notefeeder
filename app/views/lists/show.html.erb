@@ -1,0 +1,7 @@
+<% if @page == 0 %>
+  <% cache({:controller => :lists, :action => :show, :id => @list[:id], :page => @page, :action_suffix => 'list_notes'}) do %>
+    <%= render :partial => 'list_entries' %>
+  <% end %>
+<% else %>
+  <%= render :partial => 'list_entries' %>
+<%end%>

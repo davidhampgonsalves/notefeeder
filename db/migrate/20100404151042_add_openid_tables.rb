@@ -1,0 +1,13 @@
+# Use this migration to create the tables for the ActiveRecord store
+require 'ar_openid_store/migration'
+class AddOpenidTables < ActiveRecord::Migration
+
+  def self.up
+    create_openid_tables
+  end
+  
+  def self.down
+    drop_openid_tables
+  end
+  
+end

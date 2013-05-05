@@ -1,0 +1,19 @@
+<div class='content_area'>
+  <h2>deleting note</h2>
+  <div class='nav page_nav'>
+    <%= link_to 'show', {:controller => :notes, :action => :show, :id => @note.id}, :class => 'add' %>
+    <%= link_to '~ edit', {:controller => :notes, :action => :edit, :id => @note.id}, :class => 'edit' %>
+    <%= link_to 'view list', list_path(@note.list_id) %>
+  </div>
+
+  <div id='note'>
+    <h3 class='title'><%=h @note.title %></h3>
+    <% if @note.url != nil and !@note.url.empty? %>
+      <%= link_to h(@note.url), add_protocol_to_url(@note.url), :class => 'url' %>
+    <% end %>
+    <% if @note.description != nil and !@note.description.empty? %> 
+      <div id='description'> <%= markdown h(@note.description) %> </div>
+    <% end %>
+    <%= button_to "Delete", { :action => :destroy, :id => @note.id }, :method => :delete, :class => 'dangerous button' %>
+  </div>
+</div>

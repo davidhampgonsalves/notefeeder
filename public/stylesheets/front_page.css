@@ -1,0 +1,170 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+body 
+{
+	font-family: 'Droid Sans', arial, serif;
+	padding:0px;
+	margin:0px;
+}
+
+a {color:rgb(40,125, 40);}
+
+h1
+{
+	margin:0;
+	letter-spacing:-2px;
+	word-spacing: 4px;
+	font-family: "Lobster", serif;
+	font-weight:400;
+	text-align:center;
+}
+
+h1 a
+{
+	font-size:60px;
+	font-family: 'Lobster', sans-serif;
+	text-decoration:none;
+	color:black;
+	
+}
+
+h1 a:hover {color:rgb(100,205, 100);}
+			
+h2 
+{
+	font-size:25px;
+	font-family: "Lobster", serif;
+    margin:0;
+    margin-bottom:5px;
+	color:rgb(50, 50, 50);
+}
+
+h3
+{
+  display:inline;
+  font-size:18px;
+  font-family: "Lobster", serif;
+  margin-right:5px;
+  
+}
+
+h3 a
+{
+  color:rgb(100,100,100);
+}
+
+h1 div#underline
+{
+	width:200px;
+	border-top:2px solid rgb(120, 120, 120);
+	margin-left:auto;
+	margin-right:auto;
+	top:-13px;
+	position:relative;
+	z-index:-1;
+}
+
+div#nav
+{
+	text-align:center;
+}
+
+div#nav a
+{
+	color:black;
+	margin: 5px;
+}
+
+div#nav a:hover
+{
+	background: rgb(230, 230, 230);
+}
+
+li span.title
+{
+    font-family: "Lobster", serif;
+	font-weight:bold;
+    color:rgb(100,100,100);
+    font-size:20px;
+}
+
+div.content_area
+{
+  min-width:800px;
+	max-width: 900px;
+	padding:10px;
+	clear:both;
+	border-left:3px solid rgb(100, 100, 100);
+	border-right:3px solid rgb(100, 100, 100);
+	background:white;
+	margin-top:5px;
+	margin-left: auto;
+	margin-right: auto;
+  border-radius:10px;
+  -moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	
+}
+
+ul.plain
+{
+	list-style-type: none;
+	position:relative;
+	left:-30px;
+	width:900px;
+	margin:0px;
+	
+}
+
+ul.plain li
+{
+	padding-bottom:4px;
+}
+
+a.start
+{
+	display:block;
+	color:rgb(70,70,70);
+	background:rgb(200,255, 200);
+	width:350px;
+	text-align:center;
+	padding:10px;
+	font-size:40px;
+	font-family: 'Lobster', sans-serif;
+	border:5px solid rgb(150,205, 150);
+	clear:both;
+	margin-left:auto;
+	margin-right:auto;
+  border-radius:10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+a.start:hover
+{
+	color:white;
+	background:rgb(150,255, 150);
+}
+
+.important
+{
+  color:rgb(40,125, 40);
+}
+
+.not_important
+{
+  color:rgb(150, 150, 150)
+}
+
+div#error_code
+{
+    font-size: 170px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    font-family: "Lobster", serif;
+    color:rgb(255, 230, 230);
+    height:170px;
+    overflow:hidden;
+}

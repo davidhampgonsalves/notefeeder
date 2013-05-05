@@ -1,0 +1,25 @@
+<div class='content_area'>
+  <h2>showing note</h2>
+
+  <div class='page_nav nav'>
+    <%= link_to '~ edit', {:controller => :notes, :action => :edit, :id => @note.id}, :class => 'edit' %>
+    <%= link_to '- delete', {:controller => :notes, :action => :delete, :id => @note.id}, :class => 'delete' %>
+
+    <%= link_to 'view your lists', {:controller => :lists} %>
+    <%= link_to 'view this list', {:controller => :lists, :action => :show, :id => @note.list_id} %>
+  </div>
+
+  <div id='note'>
+    <%= @note.completed ? '  <span class=\'completed\'>' : '' %>
+    <h3 class='title'><%=h @note.title %></h3>
+    <% if @note.url != nil and !@note.url.empty? %>
+      <%= link_to h(@note.url), add_protocol_to_url(@note.url), :class => 'url' %>
+    <% end %>
+    <% if @note.description != nil and !@note.description.empty? %> 
+      <div id='description'> <%= markdown h(@note.description) %> </div>
+    <% end %>
+    <%= @note.completed ? '  </span>' : '' %>
+  </div>
+
+<%= link_to 'mark completed', {:action => :complete, :id => @note.id}, :class => 'button mark_completed' %>
+</div>
