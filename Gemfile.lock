@@ -16,7 +16,7 @@ GEM
     ar_openid_store (0.0.1)
       ruby-openid (>= 2.0.0)
     bluecloth (2.2.0)
-    memcached (1.8.0)
+    dalli (2.7.4)
     pg (0.17.1)
     puma (2.14.0)
     rack (1.1.6)
@@ -38,7 +38,7 @@ DEPENDENCIES
   activerecord-postgresql-adapter
   ar_openid_store
   bluecloth
-  memcached
+  dalli
   pg
   puma
   rails (= 2.3.11)
