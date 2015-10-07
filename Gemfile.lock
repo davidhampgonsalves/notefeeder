@@ -16,9 +16,9 @@ GEM
     ar_openid_store (0.0.1)
       ruby-openid (>= 2.0.0)
     bluecloth (2.2.0)
-    kgio (2.8.0)
     memcached (1.5.0)
     pg (0.17.1)
+    puma (2.14.0)
     rack (1.1.6)
     rails (2.3.11)
       actionmailer (= 2.3.11)
@@ -27,14 +27,9 @@ GEM
       activeresource (= 2.3.11)
       activesupport (= 2.3.11)
       rake (>= 0.8.3)
-    raindrops (0.11.0)
     rake (10.4.2)
     rdiscount (2.0.7.2)
     ruby-openid (2.2.3)
-    unicorn (4.6.2)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -45,10 +40,10 @@ DEPENDENCIES
   bluecloth
   memcached
   pg
+  puma
   rails (= 2.3.11)
   rdiscount
   ruby-openid
-  unicorn
 
 BUNDLED WITH
    1.10.6
