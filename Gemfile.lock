@@ -8,6 +8,8 @@ GEM
       rack (~> 1.0.0)
     activerecord (2.3.5)
       activesupport (= 2.3.5)
+    activerecord-postgresql-adapter (0.0.1)
+      pg
     activeresource (2.3.5)
       activesupport (= 2.3.5)
     activesupport (2.3.5)
@@ -16,7 +18,7 @@ GEM
     bluecloth (2.2.0)
     kgio (2.8.0)
     memcached (1.5.0)
-    pg (0.15.1)
+    pg (0.18.3)
     rack (1.0.1)
     rails (2.3.5)
       actionmailer (= 2.3.5)
@@ -26,7 +28,7 @@ GEM
       activesupport (= 2.3.5)
       rake (>= 0.8.3)
     raindrops (0.11.0)
-    rake (10.0.4)
+    rake (0.8.3)
     rdiscount (2.0.7.2)
     ruby-openid (2.2.3)
     unicorn (4.6.2)
@@ -38,6 +40,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-postgresql-adapter
   ar_openid_store
   bluecloth
   memcached
@@ -46,3 +49,6 @@ DEPENDENCIES
   rdiscount
   ruby-openid
   unicorn
+
+BUNDLED WITH
+   1.10.6

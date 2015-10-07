@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101005215132) do
+ActiveRecord::Schema.define(:version => 20101005215135) do
 
   create_table "lists", :force => true do |t|
     t.string   "name"
@@ -33,7 +33,8 @@ ActiveRecord::Schema.define(:version => 20101005215132) do
   end
 
   add_index "notes", ["list_id", "id"], :name => "index_notes_on_list_id_and_id"
-  add_index "notes", [nil, "list_id"], :name => "notes_tsearch_index"
+  add_index "notes", ["list_id"], :name => "index_notes_on_list_id"
+  add_index "notes", [nil], :name => "notes_tsearch_index"
 
   create_table "open_id_associations", :force => true do |t|
     t.binary  "server_url"

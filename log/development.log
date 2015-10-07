@@ -22644,3 +22644,427 @@ Completed in 11ms (View: 2, DB: 1) | 200 OK [http://0.0.0.0/notes/1699]
     /home/david/.gem/ruby/1.9.1/gems/unicorn-4.6.2/bin/unicorn_rails:209:in `<top (required)>'
     /home/david/bin/unicorn_rails:23:in `load'
     /home/david/bin/unicorn_rails:23:in `<main>'
+/!\ FAILSAFE /!\  2015-10-06 14:08:22 -0400
+  Status: 500 Internal Server Error
+  could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+/!\ FAILSAFE /!\  2015-10-06 14:08:28 -0400
+  Status: 500 Internal Server Error
+  could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+/!\ FAILSAFE /!\  2015-10-07 09:10:34 -0400
+  Status: 500 Internal Server Error
+  FATAL:  role "ethical_barcode" does not exist
+
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:968:in `connect'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:223:in `new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:245:in `checkout_new_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:188:in `block (2 levels) in checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `loop'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:184:in `block in checkout'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/monitor.rb:211:in `mon_synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:183:in `checkout'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:98:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:326:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:123:in `retrieve_connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_specification.rb:115:in `connection'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `block in call'
+    <internal:prelude>:10:in `synchronize'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `block in call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    /Users/davidhamp-gonsalves/repos/notefeeder/vendor/bundle/ruby/1.9.1/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+    /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (19.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [4;35;1mSQL (5.1ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLists (20100320210733)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (17.6ms)[0m   [0;1mCREATE TABLE "lists" ("id" serial primary key, "name" character varying(255), "user" character varying(255), "created_at" timestamp) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE INDEX "index_lists_on_user" ON "lists" ("user")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_lists_on_user_and_name" ON "lists" ("user", "name")[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100320210733')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+Migrating to CreateNotes (20100320232836)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mCREATE TABLE "notes" ("id" serial primary key, "list_id" integer NOT NULL, "title" character varying(255), "description" text, "url" text, "created_at" timestamp) [0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCREATE INDEX "index_notes_on_list_id" ON "notes" ("list_id")[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100320232836')[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Migrating to AddDeletedToLists (20100404151040)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mALTER TABLE "lists" ADD COLUMN "deleted" boolean[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mALTER TABLE "lists" ALTER COLUMN "deleted" SET DEFAULT 'f'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "lists" ADD COLUMN "deleted_since" timestamp[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "lists" ALTER COLUMN "deleted_since" SET DEFAULT NULL[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100404151040')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddOpenidTables (20100404151042)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mCREATE TABLE "open_id_associations" ("id" serial primary key, "server_url" bytea, "handle" character varying(255), "secret" bytea, "issued" integer, "lifetime" integer, "assoc_type" character varying(255)) [0m
+  [4;35;1mSQL (4.6ms)[0m   [0mCREATE TABLE "open_id_nonces" ("id" serial primary key, "server_url" character varying(255) NOT NULL, "timestamp" integer NOT NULL, "salt" character varying(255) NOT NULL) [0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100404151042')[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mCOMMIT[0m
+Migrating to CreateUsers (20100424002136)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (3.7ms)[0m   [0mCREATE TABLE "users" ("id" serial primary key, "user_openid" character varying(255), "user" character varying(255)) [0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCREATE INDEX "index_users_on_user_openid" ON "users" ("user_openid")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100424002136')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddPublicUrlToLists (20100428122213)
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mALTER TABLE "lists" ADD COLUMN "has_public_url" boolean[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "lists" ALTER COLUMN "has_public_url" SET DEFAULT 't'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mUPDATE "lists" SET "has_public_url"='t' WHERE "has_public_url" IS NULL[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "lists" ALTER "has_public_url" SET NOT NULL[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428122213')[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCOMMIT[0m
+Migrating to AddPrivateFlagToNotes (20100528220210)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mALTER TABLE "notes" ADD COLUMN "is_private" boolean[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mALTER TABLE "notes" ALTER COLUMN "is_private" SET DEFAULT 'f'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mUPDATE "notes" SET "is_private"='f' WHERE "is_private" IS NULL[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mALTER TABLE "notes" ALTER "is_private" SET NOT NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100528220210')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddCompletedFlagToNotes (20100606143818)
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mALTER TABLE "notes" ADD COLUMN "completed" boolean[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mALTER TABLE "notes" ALTER COLUMN "completed" SET DEFAULT 'f'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mUPDATE "notes" SET "completed"='f' WHERE "completed" IS NULL[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mALTER TABLE "notes" ALTER "completed" SET NOT NULL[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100606143818')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Migrating to AddIndexForOrderToNotes (20100621215119)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.3ms)[0m   [0mCREATE INDEX "index_notes_on_list_id_and_created_at" ON "notes" ("list_id", "created_at")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100621215119')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Migrating to RemoveCompletedAtNotes (20100916215129)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (4.2ms)[0m   [0mALTER TABLE "notes" DROP "created_at"[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100916215129')[0m
+  [4;35;1mSQL (1.5ms)[0m   [0mCOMMIT[0m
+Migrating to AddIndexToIdsNotes (20100917215130)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mCREATE INDEX "index_notes_on_list_id_and_id" ON "notes" ("list_id", "id")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100917215130')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+Migrating to AddTsearchOperatorsToPostgres (20101005215134)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101005215134')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Migrating to AddIndexToTsearchNotes (20101005215135)
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPG::UndefinedObject: ERROR: data type integer has no default operator class for access method "gist"
+HINT: You must specify an operator class for the index or define a default operator class for the data type.
+: create index notes_tsearch_index on notes using gist(to_tsvector('english', title || ' ' || url || ' ' || description), list_id)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLists (20100320210733)
+Migrating to CreateNotes (20100320232836)
+Migrating to AddDeletedToLists (20100404151040)
+Migrating to AddOpenidTables (20100404151042)
+Migrating to CreateUsers (20100424002136)
+Migrating to AddPublicUrlToLists (20100428122213)
+Migrating to AddPrivateFlagToNotes (20100528220210)
+Migrating to AddCompletedFlagToNotes (20100606143818)
+Migrating to AddIndexForOrderToNotes (20100621215119)
+Migrating to RemoveCompletedAtNotes (20100916215129)
+Migrating to AddIndexToIdsNotes (20100917215130)
+Migrating to AddTsearchOperatorsToPostgres (20101005215134)
+Migrating to AddIndexToTsearchNotes (20101005215135)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPG::UndefinedObject: ERROR: data type integer has no default operator class for access method "gist"
+HINT: You must specify an operator class for the index or define a default operator class for the data type.
+: create index notes_tsearch_index on notes using gist(to_tsvector('english', title || ' ' || url || ' ' || description), list_id)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLists (20100320210733)
+Migrating to CreateNotes (20100320232836)
+Migrating to AddDeletedToLists (20100404151040)
+Migrating to AddOpenidTables (20100404151042)
+Migrating to CreateUsers (20100424002136)
+Migrating to AddPublicUrlToLists (20100428122213)
+Migrating to AddPrivateFlagToNotes (20100528220210)
+Migrating to AddCompletedFlagToNotes (20100606143818)
+Migrating to AddIndexForOrderToNotes (20100621215119)
+Migrating to RemoveCompletedAtNotes (20100916215129)
+Migrating to AddIndexToIdsNotes (20100917215130)
+Migrating to AddTsearchOperatorsToPostgres (20101005215134)
+Migrating to AddIndexToTsearchNotes (20101005215135)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPG::UndefinedObject: ERROR: data type integer has no default operator class for access method "gist"
+HINT: You must specify an operator class for the index or define a default operator class for the data type.
+: create index notes_tsearch_index on notes using gist(to_tsvector('english', title || ' ' || url || ' ' || description), list_id)[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateLists (20100320210733)
+Migrating to CreateNotes (20100320232836)
+Migrating to AddDeletedToLists (20100404151040)
+Migrating to AddOpenidTables (20100404151042)
+Migrating to CreateUsers (20100424002136)
+Migrating to AddPublicUrlToLists (20100428122213)
+Migrating to AddPrivateFlagToNotes (20100528220210)
+Migrating to AddCompletedFlagToNotes (20100606143818)
+Migrating to AddIndexForOrderToNotes (20100621215119)
+Migrating to RemoveCompletedAtNotes (20100916215129)
+Migrating to AddIndexToIdsNotes (20100917215130)
+Migrating to AddTsearchOperatorsToPostgres (20101005215134)
+Migrating to AddIndexToTsearchNotes (20101005215135)
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (4.3ms)[0m   [0;1mcreate index notes_tsearch_index on notes using gist(to_tsvector('english', title || ' ' || url || ' ' || description))[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20101005215135')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2015-10-07 09:51:28) [GET]
+Redirected to http://localhost:3000/authentication/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#login (for 127.0.0.1 at 2015-10-07 09:51:28) [GET]
+
+LoadError (cannot load such file -- authentication_helper.rb):
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:212:in `inherited_with_helper'
+  app/controllers/authentication_controller.rb:4:in `<top (required)>'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:372:in `const_get'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:372:in `block in constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:371:in `each'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:371:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:443:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:436:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendered rescues/_trace (10.6ms)
+Rendered rescues/_request_and_response (2.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2015-10-07 09:51:43) [GET]
+Redirected to http://localhost:3000/authentication/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/lists]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#login (for 127.0.0.1 at 2015-10-07 09:51:43) [GET]
+
+LoadError (cannot load such file -- authentication_helper.rb):
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:224:in `depend_on'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:136:in `require_dependency'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/helpers.rb:212:in `inherited_with_helper'
+  app/controllers/authentication_controller.rb:4:in `<top (required)>'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing_with_dependencies'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:372:in `const_get'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:372:in `block in constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:371:in `each'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/inflector.rb:371:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.5/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:443:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:436:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+  vendor/bundle/ruby/1.9.1/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendered rescues/_trace (8.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
