@@ -23648,3 +23648,804 @@ ActionController::UnknownAction (No action responded to index. Actions: begin_op
   vendor/bundle/ruby/1.8/bin/rackup:19
 
 Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:39:46) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  vendor/bundle/ruby/1.8/gems/rack-1.1.6/bin/rackup:4
+  vendor/bundle/ruby/1.8/bin/rackup:19:in `load'
+  vendor/bundle/ruby/1.8/bin/rackup:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:39:46) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (3.5ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."has_public_url" = 't' AND "lists"."name" = 'default') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 10ms (DB: 4) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:39:46) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 12ms (View: 11, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:39:48) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  vendor/bundle/ruby/1.8/gems/rack-1.1.6/bin/rackup:4
+  vendor/bundle/ruby/1.8/bin/rackup:19:in `load'
+  vendor/bundle/ruby/1.8/bin/rackup:19
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:39:48) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (3.1ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."has_public_url" = 't' AND "lists"."name" = 'default') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 9ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:39:48) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:44:11) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:44:11) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.5ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 11ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:44:11) [GET]
+
+LoadError (cannot load such file -- errors_helper.rb):
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:250:in `depend_on'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:162:in `require_dependency'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:212:in `inherited_with_helper'
+  app/controllers/errors_controller.rb:1:in `<top (required)>'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:451:in `load_missing_constant'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:106:in `const_missing_with_dependencies'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:118:in `const_missing'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:375:in `const_get'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:375:in `block in constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:374:in `each'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:374:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:444:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendered rescues/_trace (10.4ms)
+Rendered rescues/_request_and_response (5.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:44:12) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:44:13) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.1ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 6ms (DB: 2) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:44:13) [GET]
+
+LoadError (cannot load such file -- errors_helper.rb):
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:250:in `depend_on'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:162:in `require_dependency'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:197:in `default_helper_module!'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/helpers.rb:212:in `inherited_with_helper'
+  app/controllers/errors_controller.rb:1:in `<top (required)>'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:406:in `block in load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:547:in `new_constants_in'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:405:in `load_file'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:285:in `require_or_load'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:451:in `load_missing_constant'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:106:in `const_missing_with_dependencies'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/dependencies.rb:118:in `const_missing'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:375:in `const_get'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:375:in `block in constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:374:in `each'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/inflector.rb:374:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/activesupport-2.3.11/lib/active_support/core_ext/string/inflections.rb:162:in `constantize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:444:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendered rescues/_trace (9.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:44:54) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/commonlogger.rb:31:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/configuration.rb:78:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:541:in `handle_request'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:388:in `process_client'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:270:in `block in run'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:48:43) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/commonlogger.rb:31:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/configuration.rb:78:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:541:in `handle_request'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:388:in `process_client'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:270:in `block in run'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:48:43) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.4ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:3000/errors
+Completed in 15ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:48:43) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 15ms (View: 15, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:48:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/commonlogger.rb:31:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/configuration.rb:78:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:541:in `handle_request'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:388:in `process_client'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/server.rb:270:in `block in run'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `call'
+  vendor/bundle/ruby/1.9.1/gems/puma-2.14.0/lib/puma/thread_pool.rb:106:in `block in spawn_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:48:57) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.4ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:3000/errors
+Completed in 16ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:48:57) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:50:07) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:50:07) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.2ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 29ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:50:07) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 12ms (View: 12, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:51:22) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:51:22) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.3ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 26ms (DB: 3) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:51:22) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:51:43) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.1ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 27ms (DB: 2) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.1ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 24ms (DB: 2) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:51:44) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:51:45) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.1ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 6ms (DB: 2) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:51:45) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2015-10-07 12:51:45) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:442:in `recognize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:437:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `block in build_middleware_stack'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.9.1/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+  <internal:prelude>:10:in `synchronize'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `block in call'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.9.1/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.9.3-p551/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#show_by_name (for 127.0.0.1 at 2015-10-07 12:51:45) [GET]
+  Parameters: {"user"=>"favicon.ico"}
+  [4;36;1mList Load (2.2ms)[0m   [0;1mSELECT * FROM "lists" WHERE ("lists"."user" = 'favicon.ico' AND "lists"."name" = 'default' AND "lists"."has_public_url" = 't') LIMIT 1[0m
+Redirected to http://localhost:9292/errors
+Completed in 6ms (DB: 2) | 302 Found [http://localhost/favicon.ico]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ErrorsController#index (for 127.0.0.1 at 2015-10-07 12:51:45) [GET]
+Rendering template within layouts/errors
+Rendering errors/index
+Completed in 2ms (View: 1, DB: 0) | 200 OK [http://localhost/errors]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2015-10-07 12:59:05) [GET]
+Redirected to http://localhost:9292/authentication/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/lists]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AuthenticationController#login (for 127.0.0.1 at 2015-10-07 12:59:06) [GET]
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 33ms (View: 15, DB: 0) | 200 OK [http://localhost/authentication/login]
