@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-gem 'rails', '2.3.5'
-gem 'unicorn'
+gem 'rails', '2.3.11'
+gem 'puma'
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
 gem 'ruby-openid'

@@ -1,34 +1,34 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (2.3.5)
-      actionpack (= 2.3.5)
-    actionpack (2.3.5)
-      activesupport (= 2.3.5)
-      rack (~> 1.0.0)
-    activerecord (2.3.5)
-      activesupport (= 2.3.5)
+    actionmailer (2.3.11)
+      actionpack (= 2.3.11)
+    actionpack (2.3.11)
+      activesupport (= 2.3.11)
+      rack (~> 1.1.0)
+    activerecord (2.3.11)
+      activesupport (= 2.3.11)
     activerecord-postgresql-adapter (0.0.1)
       pg
-    activeresource (2.3.5)
-      activesupport (= 2.3.5)
-    activesupport (2.3.5)
+    activeresource (2.3.11)
+      activesupport (= 2.3.11)
+    activesupport (2.3.11)
     ar_openid_store (0.0.1)
       ruby-openid (>= 2.0.0)
     bluecloth (2.2.0)
     kgio (2.8.0)
     memcached (1.5.0)
-    pg (0.18.3)
-    rack (1.0.1)
-    rails (2.3.5)
-      actionmailer (= 2.3.5)
-      actionpack (= 2.3.5)
-      activerecord (= 2.3.5)
-      activeresource (= 2.3.5)
-      activesupport (= 2.3.5)
+    pg (0.17.1)
+    rack (1.1.6)
+    rails (2.3.11)
+      actionmailer (= 2.3.11)
+      actionpack (= 2.3.11)
+      activerecord (= 2.3.11)
+      activeresource (= 2.3.11)
+      activesupport (= 2.3.11)
       rake (>= 0.8.3)
     raindrops (0.11.0)
-    rake (0.8.3)
+    rake (10.4.2)
     rdiscount (2.0.7.2)
     ruby-openid (2.2.3)
     unicorn (4.6.2)
@@ -45,7 +45,7 @@ DEPENDENCIES
   bluecloth
   memcached
   pg
-  rails (= 2.3.5)
+  rails (= 2.3.11)
   rdiscount
   ruby-openid
   unicorn
