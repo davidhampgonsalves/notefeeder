@@ -1,4 +1,5 @@
 # Be sure to restart your server when you modify this file
+ENV["RAILS_ENV"] ||= ENV["RACK_ENV"]
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -10,16 +11,6 @@ Rails::Initializer.run do |config|
 
   # Add additional load paths for your own custom dirs
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
-
-  # Specify gems that this application depends on and have them installed with rake gems:install
-  # config.gem "bj"
-  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
-  # config.gem "sqlite3-ruby", :lib => "sqlite3"
-  # config.gem "aws-s3", :lib => "aws/s3"
-  #config.gem 'ruby-openid', :lib => 'openid'
-  #config.gem 'rdiscount'
-  #config.gem 'ar_openid_store'
-  #config.gem 'memcached'
 
   #set up page caching
   config.action_controller.perform_caching = true
