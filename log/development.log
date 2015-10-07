@@ -23568,3 +23568,83 @@ Processing AuthenticationController#login (for 127.0.0.1 at 2015-10-07 10:56:06)
 Rendering template within layouts/authentication
 Rendering authentication/login
 Completed in 5ms (View: 2, DB: 1) | 200 OK [http://localhost/authentication/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ListsController#index (for 127.0.0.1 at 2015-10-07 12:26:46) [GET]
+Redirected to http://localhost:9292/authentication/login
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/lists]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AuthenticationController#login (for 127.0.0.1 at 2015-10-07 12:26:46) [GET]
+Rendering template within layouts/authentication
+Rendering authentication/login
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/authentication/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing AuthenticationController#begin_openid_auth (for 127.0.0.1 at 2015-10-07 12:26:48) [POST]
+  Parameters: {"openid_identifier"=>"https://www.google.com/accounts/o8/id", "authenticity_token"=>"OkZUlPcd68NhBxAo1U10jOVEZqQk5Sw3/4dEvh36Dq0="}
+Redirected to http://localhost:9292/authentication
+Completed in 543ms (DB: 0) | 302 Found [http://localhost/authentication/begin_openid_auth]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing AuthenticationController#index (for 127.0.0.1 at 2015-10-07 12:26:48) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: begin_openid_auth, conditional_cache, deleted_user_lists, expire_cached_lists, finish_openid_auth, has_prev_request?, logged_in?, login, login_required, login_user, logout, logout_user, redirect_post, redirect_to_org_request, save_org_request, save_prev_request, user, user_lists, and user_lists_cached?):
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:617:in `call_filters'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/flash.rb:151:in `perform_action'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `send'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:532:in `process_without_filters'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/filters.rb:606:in `process'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:391:in `process'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/base.rb:386:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/routing/route_set.rb:438:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:87:in `dispatch'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:121:in `_call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:29:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:9:in `cache'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/query_cache.rb:28:in `call'
+  vendor/bundle/ruby/1.8/gems/activerecord-2.3.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/string_coercion.rb:25:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/params_parser.rb:15:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/session/cookie_store.rb:99:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/failsafe.rb:26:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:114:in `call'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/reloader.rb:34:in `run'
+  vendor/bundle/ruby/1.8/gems/actionpack-2.3.11/lib/action_controller/dispatcher.rb:108:in `call'
+  vendor/bundle/ruby/1.8/gems/rails-2.3.11/lib/rails/rack/static.rb:31:in `call'
+  vendor/bundle/ruby/1.8/gems/rails-2.3.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /Users/davidhamp-gonsalves/.rbenv/versions/1.8.7-p375/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  vendor/bundle/ruby/1.8/gems/rack-1.1.6/bin/rackup:4
+  vendor/bundle/ruby/1.8/bin/rackup:19:in `load'
+  vendor/bundle/ruby/1.8/bin/rackup:19
+
+Rendering rescues/layout (not_found)
