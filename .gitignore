@@ -1,5 +1,7 @@
 db/*.sqlite3
-log/*.log
+log
+tag
 tmp/**/*
 .bundle
 vendor/bundle
+

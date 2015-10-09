@@ -29,7 +29,7 @@ GEM
       rake (>= 0.8.3)
     rake (10.4.2)
     rdiscount (2.0.7.2)
-    ruby-openid (2.2.3)
+    ruby-openid (2.7.0)
 
 PLATFORMS
   ruby
