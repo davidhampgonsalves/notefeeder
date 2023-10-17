@@ -1,3 +1,5 @@
+<img style="float:right" src="https://raw.githubusercontent.com/davidhampgonsalves/notefeeder/master/notefeeder.png">
+
 Note Feeder is a small web application that lets you save urls and notes from your current page.
 
 You can access your notes from RSS feeds to find sites or thoughts later.
@@ -16,6 +18,7 @@ One of the main requirements I had for the project was that I didn’t want to h
 Note Feeder does this by offering some convient input methods like a bookmarklet, get request or simple forms.
 
 ## Technical Notes
+
 Note Feeder is a fairly simple Rails Web App. It ran on Heroku until the bamboo stack was shutdown. It needs to be upgraded to cedar to run again.
 
 Authentication is handled using OpenId. This greatly reduces the first usage barrier.
